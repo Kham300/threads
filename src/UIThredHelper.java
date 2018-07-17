@@ -1,0 +1,3 @@
+interface  UIThreadHelper{
+    void workInUI();
+}
