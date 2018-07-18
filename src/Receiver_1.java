@@ -1,4 +1,9 @@
 public class Receiver_1 extends Thread{
+    private String name;
+
+    public Receiver_1(String name) {
+        this.name = name;
+    }
 
     @Override
     public void run() {
@@ -8,7 +13,7 @@ public class Receiver_1 extends Thread{
                 sleep(500);
                 if (Util.isEmpty()) {
                     sleep(3000);
-                    System.out.println("Receiver_1 goes to sleep for 3 sec");
+                    System.out.println( name + " goes to sleep for 3 sec");
                     } else {
                     String s = Util.get();
                     Util.print(s);
